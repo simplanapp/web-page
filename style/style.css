@@ -1,0 +1,84 @@
+li.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form {
+  margin: 10px 0px;
+}
+a.btn {
+
+  display: flex;
+  justify-content: center;
+  margin: 10px ;
+  background-color: #26155E;
+  width: 110px;
+  border: 1px solid #FFF;
+}
+.ofer {
+  /*align-items: center;*/
+  display: flex;
+
+  /*justify-content: space-around;*/
+}
+.inline {
+  /*align-items: center;*/
+  display: inline-block !important;
+  width: 50%;
+
+  /*justify-content: space-around;*/
+}
+
+th.test {
+  margin: 10px
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.Card {
+  border: 1px solid #FFF;
+  padding: 5px;
+  background-color: #ffd699
+}
+div.jumbotron {
+  background-color: #6433B1
+}
+.korah{
+  background-color: #6433B1 !important;
+  text-align: left !important;
+
+}
+.mom {
+    width: 100%; /* Try setting this to 400px or something */
+    display: table;
+
+}
+.child {
+    display: table-cell;
+}
+.childinner {
+    margin-left: 25px;
+    /* Decorative .. */
+    align-items: center;
+    min-height: 40px;
+    text-align: center;
+}
+.child:first-child .childinner {
+    margin-left: 0;
+}
+h1 {
+  text-align: center;
+
+}
+.temp1 {
+    background-color: #26155E !important;
+}
+.temp2{
+    background-color: #26155E !important;
+}
+.temp3 {
+    background-color: #26155E !important;
+}
