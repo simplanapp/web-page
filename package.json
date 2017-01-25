@@ -30,9 +30,11 @@
   "dependencies": {
     "axios": "^0.15.3",
     "babel-preset-stage-1": "^6.1.18",
+    "express": "^4.14.0",
     "firebase": "^3.6.6",
     "lodash": "^3.10.1",
     "material-ui": "^0.16.7",
+    "path": "^0.12.7",
     "react": "^15.4.2",
     "react-addons-test-utils": "^0.14.8",
     "react-redux": "^4.0.0",
