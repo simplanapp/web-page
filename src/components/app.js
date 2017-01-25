@@ -33,10 +33,10 @@ renderEvent() {
   render() {
     //console.log(this.props.posts);
     return (
-      <div>
+      <div className="full">
         <h4>SIMPLAN EVENTS</h4>
         {this.props.children}
-  
+
 
 
 

@@ -9,6 +9,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Paper from 'material-ui/Paper';
 import DialogExampleSimple from './dialog_button';
 import GoingButton from './going_button';
+import NotGoingButton from './notgoing_button';
 injectTapEventPlugin();
 var event ,placeId;
 
@@ -117,7 +118,7 @@ class EventDetails extends Component {
 
 
           <div className='inline'><GoingButton eventId={this.props.params.id}/></div>
-          <div className='inline'><DialogExampleSimple /></div>
+          <div className='inline'><NotGoingButton eventId={this.props.params.id} /></div>
 {/* <DialogExampleSimple className='inline'/> */}
 
         </div>
