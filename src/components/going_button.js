@@ -19,14 +19,16 @@ import axios from 'axios';
    timeout: 1000,
    headers: {'Access-Control-Allow-Origin': '*'}
  });
- onst styles = {
+ const styles = {
 
   color: '#26155E',
+  // primary: 'true',
+  // border: '2px solid #ff980',
+  backgroundColor: '#007f00',
   labelColor: '#ffffff',
 
-  // border: '2px solid #ff980',
-  backgroundColor: '#7f0000',
 
+  // labelColor: '#ffffff',
   }
 
 export default class GoingButton extends React.Component {
