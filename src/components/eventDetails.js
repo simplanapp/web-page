@@ -10,6 +10,7 @@ import Paper from 'material-ui/Paper';
 import DialogExampleSimple from './dialog_button';
 import GoingButton from './going_button';
 import NotGoingButton from './notgoing_button';
+import ImageCard from './image_card';
 injectTapEventPlugin();
 var event ,placeId;
 
@@ -30,6 +31,10 @@ class EventDetails extends Component {
     }
     console.log( this.props);
    event = this.props.event;
+   if((event.photoUrl== '') ||(event.photoUrl=='default')){
+     event.photoUrl='https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/eventPhotos%2Fdefault%2F2014%2B36_Friends_Cast_Poker(1).jpg?alt=media&token=b3793a3e-a6e0-4354-957e-1b772fe9ab96';
+     console.log('*****************************************photo');
+   }
    var names=[event.who];
    console.log(names);
    getWhoNames(names)
@@ -52,9 +57,9 @@ class EventDetails extends Component {
 };
     return (
         <div className="jumbotron">
-          <h1>
-            {this.props.event.name}
-          </h1>
+      <MuiThemeProvider>
+        <ImageCard eventInfo={this.props.event} />
+      </MuiThemeProvider>
 <MuiThemeProvider >
   <Card className="cardview">
    <CardHeader className = "cardhead"
@@ -62,14 +67,16 @@ class EventDetails extends Component {
      subtitle={event.where[placeId].adress}
      actAsExpander={true}
      titleColor = '#512DA8'
-     subtitleStyle={{ fontSize:  20}}
+     subtitleStyle={{ fontSize:  20,
+      padding: 20}}
      titleStyle={{
-       fontSize:  50
+       fontSize:  60,
+       padding: 40
      }}
      showExpandableButton={true}
    />
 
-   <CardText expandable={false} >
+   <CardText expandable={true} >
     יש עוד מקומות אפשריים כנס להצביע
    </CardText>
  </Card>
@@ -82,13 +89,15 @@ class EventDetails extends Component {
     actAsExpander={true}
     showExpandableButton={true}
     titleColor = '#512DA8'
-    subtitleStyle={{ fontSize:  20}}
+    subtitleStyle={{ fontSize:  20,
+    padding: 20}}
     titleStyle={{
-      fontSize:  50
+      fontSize:  50,
+      padding: 40
     }}
   />
 
-  <CardText expandable={false}>
+  <CardText expandable={true}>
    יש עוד מקומות אפשריים כנס להצביע
   </CardText>
  </Card>

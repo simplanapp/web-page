@@ -29,7 +29,7 @@ export function fetchPosts() {
   };
 }
 export function fetchEvent(eventId){
-  console.log("event fetched");
+  console.log("event fetc");
   return dispatch => {
     if (!eventId ){eventId='-Kah7fzteYMwy0dVT0ge'}
     Posts.child(eventId).on('value', snapshot => {

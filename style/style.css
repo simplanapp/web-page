@@ -5,10 +5,17 @@ li.list-group-item {
 }
 body {
     height:100% !important;
+    width: 100% !important;
     position: absolute.
+ }
+ .bo {
+   height:100% !important;
+   width: 100% !important;
+   position: absolute.
  }
  .container {
   height: 100% !important;
+  width: 100% !important;
   position: absolute.
  }
 form {
@@ -16,7 +23,10 @@ form {
 }
 html {
   height: 100% !important;
-  position: absolute
+  width: 100% !important;
+
+  position: absolute;
+  margin: 0;
 }
 a.btn {
 
@@ -67,8 +77,9 @@ th.test {
   position: absolute;
 }
 .jumbotron h1 {
-  margin-bottom: 30px !important;
-
+  margin-bottom: 50px !important;
+  font-size: 100px !important;
+  color: #311B92 !important;
 }
 .korah{
   background-color: #6433B1 !important;
@@ -77,7 +88,7 @@ th.test {
 }
 .cardview{
   width: 100% !important;
-  height: 20% !important;
+
   font-weight: large;
   font: 40px arial, sans-serif !important;
 
@@ -91,17 +102,21 @@ th.test {
 .mom {
     width: 100%; /* Try setting this to 400px or something */
     display: table;
+    padding: 20px;
 
 }
 .child {
     display: table-cell;
+    padding: : 20
 }
 .childinner {
     margin-left: 25px;
     /* Decorative .. */
     align-items: center;
-    min-height: 150x;
+    min-height: 150;
     text-align: center;
+    font-size: 35px !important;
+    padding: 20
 }
 .child:first-child .childinner {
     margin-left: 0;
