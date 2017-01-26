@@ -34,7 +34,6 @@ renderEvent() {
     //console.log(this.props.posts);
     return (
       <div className="full">
-        <h4>SIMPLAN EVENTS</h4>
         {this.props.children}
 
 

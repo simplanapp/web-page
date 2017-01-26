@@ -3,9 +3,20 @@ li.list-group-item {
   justify-content: space-between;
   align-items: center;
 }
-
+body {
+    height:100% !important;
+    position: absolute.
+ }
+ .container {
+  height: 100% !important;
+  position: absolute.
+ }
 form {
   margin: 10px 0px;
+}
+html {
+  height: 100% !important;
+  position: absolute
 }
 a.btn {
 
@@ -23,8 +34,8 @@ a.btn {
   /*justify-content: space-around;*/
 }
 .full{
-  width: 100%;
-  height: :100%;
+  width: 100% !important;
+  height: :100% !important;
 }
 .inline {
   /*align-items: center;*/
@@ -45,17 +56,37 @@ th.test {
 .Card {
   border: 1px solid #FFF;
   padding: 5px;
-  background-color: #ffd699
+  background-color: #ffd699;
+  height: 25%;
+  min-height: 300px !important;
 }
-div.jumbotron {
-  background-color: #6433B1;
-  width: 100%;
-  height: :100%;
+.jumbotron {
+  background-color: #F5F5F5 !important;
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+}
+.jumbotron h1 {
+  margin-bottom: 30px !important;
+
 }
 .korah{
   background-color: #6433B1 !important;
   text-align: left !important;
 
+}
+.cardview{
+  width: 100% !important;
+  height: 20% !important;
+  font-weight: large;
+  font: 40px arial, sans-serif !important;
+
+}
+.cardhead{
+    font: 40px arial, sans-serif !important;
+}
+.cardhead.span{
+  font: 40px arial, sans-serif !important;
 }
 .mom {
     width: 100%; /* Try setting this to 400px or something */
@@ -69,7 +100,7 @@ div.jumbotron {
     margin-left: 25px;
     /* Decorative .. */
     align-items: center;
-    min-height: 40px;
+    min-height: 150x;
     text-align: center;
 }
 .child:first-child .childinner {

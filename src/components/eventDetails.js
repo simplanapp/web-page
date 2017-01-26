@@ -51,39 +51,44 @@ class EventDetails extends Component {
 
 };
     return (
-        <div className="jumbotron" >
+        <div className="jumbotron">
           <h1>
             {this.props.event.name}
-
-
           </h1>
 <MuiThemeProvider >
-  <Card >
-   <CardHeader
+  <Card className="cardview">
+   <CardHeader className = "cardhead"
      title={event.currentPlace}
      subtitle={event.where[placeId].adress}
      actAsExpander={true}
      titleColor = '#512DA8'
-
+     subtitleStyle={{ fontSize:  20}}
+     titleStyle={{
+       fontSize:  50
+     }}
      showExpandableButton={true}
    />
 
-   <CardText expandable={true} >
+   <CardText expandable={false} >
     יש עוד מקומות אפשריים כנס להצביע
    </CardText>
  </Card>
   </MuiThemeProvider>
   <MuiThemeProvider>
- <Card>
-  <CardHeader
+ <Card className="cardview">
+  <CardHeader className= "cardhead"
     title={time}
     subtitle={date}
     actAsExpander={true}
     showExpandableButton={true}
     titleColor = '#512DA8'
+    subtitleStyle={{ fontSize:  20}}
+    titleStyle={{
+      fontSize:  50
+    }}
   />
 
-  <CardText expandable={true}>
+  <CardText expandable={false}>
    יש עוד מקומות אפשריים כנס להצביע
   </CardText>
  </Card>
