@@ -23,8 +23,26 @@ export default class TextFieldExampleControlled extends React.Component {
     return (
       <div>
         <TextField
-          hintText="Enter your name"
+          hintText=" "
+          hintStyle={{
+            fontSize: '50px'
+          }}
+
+          floatingLabelStyle={{
+            height: '50%',
+              fontSize: '50px'
+            }}
+          floatingLabelFocusStyle={{
+              margin: '-30px'
+          }}
           errorText="This field is required"
+          errorStyle={{
+            margin: '30px',
+            fontSize: '20px !important'
+          }}
+          floatingLabelStyle={{
+            fontSize: '50px'
+          }}
           floatingLabelText="Enter your name"
           id="text-field-controlled"
           value={this.state.value}

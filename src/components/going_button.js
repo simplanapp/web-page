@@ -93,10 +93,18 @@ export default class GoingButton extends React.Component {
       <FlatButton
         label="Cancel"
         primary={true}
+        labelStyle={{
+          fontSize: '35px'
+
+        }}
         onTouchTap={this.handleClose}
       />,
       <FlatButton
         label="Submit"
+        labelStyle={{
+          fontSize: '35px'
+
+        }}
         primary={true}
         keyboardFocused={true}
         onTouchTap={this.handleSubmit}
@@ -112,11 +120,21 @@ export default class GoingButton extends React.Component {
         <MuiThemeProvider>
 
         <Dialog
-          title="Dialog With Actions"
           actions={actions}
+          style={{
+
+            boxSizing: 'inherit'
+          }}
+          contentStyle={{
+
+            boxSizing: 'inherit',
+            size: 'large'
+          }}
+          bodyClassName='bodyc'
           modal={false}
           open={this.state.open}
           onRequestClose={this.handleClose}
+          autoDetectWindowHeight={false}
         >
 
           <TextFieldExampleError handleChange={this.handleChangedName} ref = "nameRef"/>

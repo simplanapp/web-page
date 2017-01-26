@@ -71,7 +71,8 @@ class EventDetails extends Component {
       padding: 20}}
      titleStyle={{
        fontSize:  60,
-       padding: 40
+       padding: 40,
+
      }}
      showExpandableButton={true}
    />

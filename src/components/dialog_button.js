@@ -55,7 +55,7 @@ export default class DialogExampleSimple extends React.Component {
     return (
           <div>
           <MuiThemeProvider>
-        <RaisedButton  label="Can't go" primary={true} fullWidth={true} onTouchTap={this.handleOpen} style={styles} buttonStyle={styles} />
+        <RaisedButton  label="Can't go" primary={true}   fullWidth={true} onTouchTap={this.handleOpen} style={styles} buttonStyle={styles} />
       </MuiThemeProvider>
         <MuiThemeProvider>
 
@@ -65,6 +65,7 @@ export default class DialogExampleSimple extends React.Component {
           modal={false}
           open={this.state.open}
           onRequestClose={this.handleClose}
+          autoDetectWindowHeight={false}
         >
           The actions in this window were passed in as an array of React objects.
         </Dialog>

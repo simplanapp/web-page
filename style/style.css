@@ -56,7 +56,7 @@ a.btn {
 }
 
 th.test {
-  margin: 10px
+  margin: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,6 +81,29 @@ th.test {
   font-size: 100px !important;
   color: #311B92 !important;
 }
+.bodyc{
+  margin: 10px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 50px !important;
+  position: relative !important;
+}
+.bodyc div{
+  margin: 2px;
+  display: relative;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 50px !important;
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+}
+.bodyc hr{
+  position: relative !important;
+  display: relative !important;
+}
+
 .korah{
   background-color: #6433B1 !important;
   text-align: left !important;
