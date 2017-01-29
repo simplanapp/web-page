@@ -10,7 +10,9 @@ import Paper from 'material-ui/Paper';
 import DialogExampleSimple from './dialog_button';
 import GoingButton from './going_button';
 import NotGoingButton from './notgoing_button';
+import Chip from 'material-ui/Chip';
 import ImageCard from './image_card';
+import ChipFriend from './chip'
 injectTapEventPlugin();
 var event ,placeId;
 
@@ -29,6 +31,7 @@ class EventDetails extends Component {
     if(!this.props.event.name){
       return <div> loading </div>;
     }
+    //getWhoNames
     console.log( this.props);
    event = this.props.event;
    if((event.photoUrl== '') ||(event.photoUrl=='default')){
@@ -54,7 +57,7 @@ class EventDetails extends Component {
    var hour= a.getHours();
    var min = a.getMinutes();
    if (min <  10) {min='00'}
-   var time = hour+":"+min+":00";
+   var time = hour+":"+min;
    const style = {
   height: 80,
   width: 80,
@@ -140,11 +143,21 @@ class EventDetails extends Component {
       </Card>
     </MuiThemeProvider>
 
+    <MuiThemeProvider>
+    <Card>
+      <CardHeader>
+        <ChipFriend names={names}/>
 
+          </CardHeader>
+
+    </Card>
+    </MuiThemeProvider>
 
           <div className='inline'><GoingButton eventId={this.props.params.id}/></div>
           <div className='inline'><NotGoingButton eventId={this.props.params.id} /></div>
 {/* <DialogExampleSimple className='inline'/> */}
+
+
 
         </div>
 
@@ -152,9 +165,47 @@ class EventDetails extends Component {
   }
 }
 function getWhoNames (names){
-  names.map((user)=>{
-    console.log(user.name);
-  })
+//console.log(names[0]);
+console.log('###########');
+console.log(names);
+  var x=names[0]
+  var namesArray=[]
+
+  for (var name in x)
+  {
+    var user={
+      "name":x[name].name,
+      "lastName":x[name].lastName,
+      "status":x[name].status,
+      "id":x[name].phoneNumber
+    }
+    namesArray.push(user)
+
+  }
+    //console.log(namesArray);
+
+    namesArray.map((user)=>{
+      console.log(user);
+
+        return (
+         <Chip
+           key={user.id}
+           style={{margin: 4}}
+         >
+
+        {user.name+ ' '+ user.lastName}
+
+
+         </Chip>
+       );
+
+
+    })
+
+  // x.map((user)=>{
+  //   console.log('###########');
+  //   console.log(user.name);
+  // })
 }
 function mapStateToProps(state) {
   return { event: state.event };
