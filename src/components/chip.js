@@ -11,7 +11,7 @@ export default class ChipExampleArray extends React.Component {
 
   constructor(props) {
     super(props);
-    var data=getWhoNames(this.props.names)
+    var data=getWhoNames(this.props.names,this.props.webNames)
     this.state = {chipData: data}
 
     this.styles = {
@@ -72,11 +72,13 @@ export default class ChipExampleArray extends React.Component {
     );
   }
 }
-function getWhoNames (names){
+function getWhoNames (names,webNames){
 //console.log(names[0]);
 console.log('###########');
-console.log(names);
+//console.log(names);
   var x=names[0]
+  var y=webNames[0]
+  console.log(y);
   var namesArray=[]
 
   for (var name in x)
@@ -91,6 +93,19 @@ console.log(names);
     namesArray.push(user)
 
   }
+  for (var name in y)
+  {
+    var user={
+      "name":y[name].name,
+      "lastName":'',
+      "status":y[name].status,
+      "id":name
+    }
+
+    namesArray.push(user)
+
+  }
+
   namesArray=namesArray.sort((a,b)=>{
     return parseFloat(a.status) - parseFloat(b.status);
   })

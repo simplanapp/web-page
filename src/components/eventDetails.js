@@ -12,7 +12,9 @@ import GoingButton from './going_button';
 import NotGoingButton from './notgoing_button';
 import Chip from 'material-ui/Chip';
 import ImageCard from './image_card';
+import IconButton from './icon_button'
 import ChipFriend from './chip'
+
 injectTapEventPlugin();
 var event ,placeId;
 
@@ -36,11 +38,12 @@ class EventDetails extends Component {
    event = this.props.event;
    if((event.photoUrl== '') ||(event.photoUrl=='default')){
      event.photoUrl='https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/eventPhotos%2Fdefault%2F2014%2B36_Friends_Cast_Poker(1).jpg?alt=media&token=b3793a3e-a6e0-4354-957e-1b772fe9ab96';
-     console.log('*****************************************photo');
+     //console.log('*****************************************photo');
    }
    var names=[event.who];
-   console.log(names);
-   getWhoNames(names)
+   var webNames=[event.webWho]
+   //console.log(names);
+   //getWhoNames(names)
    placeId = event.curPlaceId;
    var a = new Date(event.currentTime *1000)
    var weekday = new Array(7);
@@ -91,7 +94,8 @@ class EventDetails extends Component {
    />
 
    <CardText expandable={true} >
-    יש עוד מקומות אפשריים כנס להצביע
+    יש עוד מקומות אפשריים כנס להצביע  <IconButton/>
+
    </CardText>
  </Card>
   </MuiThemeProvider>
@@ -146,7 +150,7 @@ class EventDetails extends Component {
     <MuiThemeProvider>
     <Card>
       <CardHeader>
-        <ChipFriend names={names}/>
+        <ChipFriend names={names} webNames={webNames}/>
 
           </CardHeader>
 
