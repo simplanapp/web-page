@@ -50,7 +50,7 @@ class EventDetails extends Component {
    weekday[6] = "Saturday";
 
    var n = weekday[a.getDay()];
-   var date = a.toLocaleDateString()+ " "+ n;
+   var date = n+ "   "+ a.toLocaleDateString();
    var hour= a.getHours();
    var min = a.getMinutes();
    if (min <  10) {min='00'}
@@ -77,7 +77,7 @@ class EventDetails extends Component {
      subtitle={event.where[placeId].adress}
      actAsExpander={true}
      titleColor = '#512DA8'
-     subtitleStyle={{ fontSize:  20,
+     subtitleStyle={{ fontSize:  35,
       padding: 20}}
      titleStyle={{
        fontSize:  60,
@@ -100,7 +100,7 @@ class EventDetails extends Component {
     actAsExpander={true}
     showExpandableButton={true}
     titleColor = '#512DA8'
-    subtitleStyle={{ fontSize:  20,
+    subtitleStyle={{ fontSize:  35,
     padding: 20}}
     titleStyle={{
       fontSize:  50,
