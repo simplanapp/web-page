@@ -49,7 +49,7 @@ class EventDetails extends Component {
    weekday[5] = "Friday";
    weekday[6] = "Saturday";
 
-   var n = weekday[d.getDay()];
+   var n = weekday[a.getDay()];
    var date = a.toLocaleDateString()+ " "+ n;
    var hour= a.getHours();
    var min = a.getMinutes();
