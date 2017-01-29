@@ -14,7 +14,8 @@ import Chip from 'material-ui/Chip';
 import ImageCard from './image_card';
 import IconButton from './icon_button'
 import ChipFriend from './chip'
-
+import Tiles from './tiles'
+import {GridList, GridTile} from 'material-ui/GridList';
 injectTapEventPlugin();
 var event ,placeId;
 
@@ -147,7 +148,7 @@ class EventDetails extends Component {
       </Card>
     </MuiThemeProvider>
 
-    <MuiThemeProvider>
+    {/* <MuiThemeProvider>
     <Card>
       <CardHeader>
         <ChipFriend names={names} webNames={webNames}/>
@@ -155,11 +156,13 @@ class EventDetails extends Component {
           </CardHeader>
 
     </Card>
+    </MuiThemeProvider> */}
+    <MuiThemeProvider style={{marginBottom:20}}>
+       <Tiles names={names} webNames={webNames} />
     </MuiThemeProvider>
-
           <div className='inline'><GoingButton eventId={this.props.params.id}/></div>
           <div className='inline'><NotGoingButton eventId={this.props.params.id} /></div>
-{/* <DialogExampleSimple className='inline'/> */}
+{/* <DialogExampleSimpTle className='inline'/> */}
 
 
 
@@ -168,49 +171,7 @@ class EventDetails extends Component {
     );
   }
 }
-function getWhoNames (names){
-//console.log(names[0]);
-console.log('###########');
-console.log(names);
-  var x=names[0]
-  var namesArray=[]
 
-  for (var name in x)
-  {
-    var user={
-      "name":x[name].name,
-      "lastName":x[name].lastName,
-      "status":x[name].status,
-      "id":x[name].phoneNumber
-    }
-    namesArray.push(user)
-
-  }
-    //console.log(namesArray);
-
-    namesArray.map((user)=>{
-      console.log(user);
-
-        return (
-         <Chip
-           key={user.id}
-           style={{margin: 4}}
-         >
-
-        {user.name+ ' '+ user.lastName}
-
-
-         </Chip>
-       );
-
-
-    })
-
-  // x.map((user)=>{
-  //   console.log('###########');
-  //   console.log(user.name);
-  // })
-}
 function mapStateToProps(state) {
   return { event: state.event };
 }

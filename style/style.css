@@ -49,6 +49,7 @@ a.btn {
 }
 .inline {
   /*align-items: center;*/
+  margin-top: 20px;
   display: inline-block !important;
   width: 50%;
 
@@ -121,6 +122,10 @@ th.test {
 }
 .cardhead.span{
   font: 40px arial, sans-serif !important;
+}
+.img-circle {
+    border-radius: 50%;
+    background-color: 'Green' !important
 }
 .mom {
     width: 100%; /* Try setting this to 400px or something */

@@ -39,9 +39,9 @@ export default class ChipExampleArray extends React.Component {
   };
 
   renderChip(data) {
-    console.log('555555555');
-    console.log(data);
-    console.log(this);
+    //console.log('555555555');
+    //1console.log(data);
+  //  console.log(this);
     var color= 'Grey'
     if(data.status==0){
       color ='Green'
@@ -74,11 +74,11 @@ export default class ChipExampleArray extends React.Component {
 }
 function getWhoNames (names,webNames){
 //console.log(names[0]);
-console.log('###########');
+//console.log('###########');
 //console.log(names);
   var x=names[0]
   var y=webNames[0]
-  console.log(y);
+  //console.log(y);
   var namesArray=[]
 
   for (var name in x)
