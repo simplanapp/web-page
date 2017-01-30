@@ -35,7 +35,7 @@ export default class TextFieldExampleControlled extends React.Component {
           floatingLabelFocusStyle={{
               margin: '-30px'
           }}
-          errorText="This field is required"
+
           errorStyle={{
             margin: '30px',
             fontSize: '20px !important'
@@ -48,6 +48,7 @@ export default class TextFieldExampleControlled extends React.Component {
           value={this.state.value}
           onChange={this.handleChange }
         />
+        
       </div>
     );
   }

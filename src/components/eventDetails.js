@@ -16,6 +16,7 @@ import IconButton from './icon_button'
 import ChipFriend from './chip'
 import Tiles from './tiles'
 import {GridList, GridTile} from 'material-ui/GridList';
+import queryString from 'query-string';
 injectTapEventPlugin();
 var event ,placeId;
 
@@ -37,6 +38,7 @@ class EventDetails extends Component {
     //getWhoNames
     console.log( this.props);
    event = this.props.event;
+   var url=buildUrl( this.props.params.id )
    if((event.photoUrl== '') ||(event.photoUrl=='default')){
      event.photoUrl='https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/eventPhotos%2Fdefault%2F2014%2B36_Friends_Cast_Poker(1).jpg?alt=media&token=b3793a3e-a6e0-4354-957e-1b772fe9ab96';
      //console.log('*****************************************photo');
@@ -72,10 +74,11 @@ class EventDetails extends Component {
 
 
 };
+console.log(url+'2333333333333333333333333333333333333333333333333333');
     return (
         <div className="jumbotron">
       <MuiThemeProvider>
-        <ImageCard eventInfo={this.props.event} />
+        <ImageCard eventInfo={this.props.event} url={url} />
       </MuiThemeProvider>
 <MuiThemeProvider >
   <Card className="cardview">
@@ -94,10 +97,9 @@ class EventDetails extends Component {
      showExpandableButton={true}
    />
 
-   <CardText expandable={true} >
-    יש עוד מקומות אפשריים כנס להצביע  <IconButton/>
-
-   </CardText>
+   <CardText expandable={true} style={{fontSize:35}}>
+ יש עוד מקומות!! הורד את האפליקציה כדי להצביע ולהשפיע
+    </CardText>
  </Card>
   </MuiThemeProvider>
   <MuiThemeProvider>
@@ -116,14 +118,14 @@ class EventDetails extends Component {
     }}
   />
 
-  <CardText expandable={true}>
-   יש עוד מקומות אפשריים כנס להצביע
+  <CardText expandable={true} style={{fontSize:35}}>
+   יש עוד זמנים!! הרד את האפליקציה כדי להצביע ולהשפיע
   </CardText>
  </Card>
 </MuiThemeProvider>
 
   <MuiThemeProvider>
-    <Card style={{marginBottom:20}}>
+    <Card>
       <CardHeader>
 
         <div className="mom">
@@ -158,12 +160,18 @@ class EventDetails extends Component {
     </Card>
     </MuiThemeProvider> */}
     <MuiThemeProvider style={{marginBottom:20}}>
-       <Tiles names={names} webNames={webNames} />
+      <Card>
+        <CardHeader>
+          <Tiles names={names} webNames={webNames} />
+        </CardHeader>
+
+      </Card>
+
     </MuiThemeProvider>
           <div className='inline'><GoingButton eventId={this.props.params.id}/></div>
           <div className='inline'><NotGoingButton eventId={this.props.params.id} /></div>
 {/* <DialogExampleSimpTle className='inline'/> */}
-          <div >  </div>
+          <div > "    " </div>
 
 
         </div>
@@ -175,6 +183,15 @@ class EventDetails extends Component {
 function mapStateToProps(state) {
   return { event: state.event };
 }
+function buildUrl(eventId){
+console.log("this is our eventid"+eventId);
+var link ='https://blooming-savannah-34852.herokuapp.com/preview?'
+ link= link + queryString.stringify({
+    id: eventId,
+});
+var link2=`https://kh6rp.app.goo.gl/?link=${link}&apn=com.simplan&ibi=com.jerem.ProjectAlphaSimplan&isi=1117985242&d=1`
+return (link2);
 
+}
 
 export default connect( mapStateToProps, actions)(EventDetails);

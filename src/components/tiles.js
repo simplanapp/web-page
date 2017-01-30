@@ -125,7 +125,7 @@ return(
             {tile.name}
           </Avatar> */}
           <div /*style={{backgroundColor: imageColor[tile.status]}} */>
-             <img  className="img-circle" src={tile.photo} />
+             <img  className="img-circle" src={tile.photo} style={{borderColor:imageColor[tile.status]}} />
           </div>
 
         </GridTile>

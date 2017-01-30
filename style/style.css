@@ -51,6 +51,7 @@ a.btn {
   /*align-items: center;*/
   margin-top: 20px;
   display: inline-block !important;
+
   width: 50%;
 
   /*justify-content: space-around;*/
@@ -128,27 +129,41 @@ th.test {
     width: 150px !important;
     height: 150px !important;
     border-radius: 100%;
-    border: 1px solid #212121;
+    border: 2px solid #212121;
+
+}
+.icon {
+    display: block!important;
+    margin: 5 auto!important;
+    position: absolute;
+    top: 0; bottom:0; right:0;
+
+}
+.icon2 {
+    display: block!important;
+    margin: 5 auto!important;
+    position: absolute;
+    bottom:0; left:0;
 
 }
 .mom {
     width: 100%; /* Try setting this to 400px or something */
     display: table;
-    padding: 5px;
+    padding: 1px;
 
 }
 .child {
     display: table-cell;
-    padding: : 10
+    padding: : 1
 }
 .childinner {
     margin-left: 25px;
     /* Decorative .. */
     align-items: center;
-    min-height: 150;
+
     text-align: center;
-    font-size: 35px !important;
-    padding: 20
+    font: 40px arial, sans-serif !important;;
+    padding: 2
 }
 .child:first-child .childinner {
     margin-left: 0;
