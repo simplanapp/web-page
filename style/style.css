@@ -125,17 +125,17 @@ th.test {
 }
 .img-circle {
     border-radius: 50%;
-    background-color: 'Green' !important
+    max-width: 180px !important
 }
 .mom {
     width: 100%; /* Try setting this to 400px or something */
     display: table;
-    padding: 20px;
+    padding: 5px;
 
 }
 .child {
     display: table-cell;
-    padding: : 20
+    padding: : 10
 }
 .childinner {
     margin-left: 25px;

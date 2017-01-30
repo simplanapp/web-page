@@ -83,12 +83,12 @@ class EventDetails extends Component {
      title={event.currentPlace}
      subtitle={event.where[placeId].adress}
      actAsExpander={true}
-     titleColor = '#512DA8'
+     titleColor = 'Black'
      subtitleStyle={{ fontSize:  35,
-      padding: 20}}
+      padding: 2}}
      titleStyle={{
        fontSize:  60,
-       padding: 40,
+       padding: 10,
 
      }}
      showExpandableButton={true}
@@ -107,12 +107,12 @@ class EventDetails extends Component {
     subtitle={time}
     actAsExpander={true}
     showExpandableButton={true}
-    titleColor = '#512DA8'
+    titleColor = 'Black'
     subtitleStyle={{ fontSize:  35,
-    padding: 20}}
+    padding: 2}}
     titleStyle={{
       fontSize:  50,
-      padding: 40
+      padding: 10
     }}
   />
 
@@ -163,7 +163,7 @@ class EventDetails extends Component {
           <div className='inline'><GoingButton eventId={this.props.params.id}/></div>
           <div className='inline'><NotGoingButton eventId={this.props.params.id} /></div>
 {/* <DialogExampleSimpTle className='inline'/> */}
-
+          <div padding={'10px'}>  </div>
 
 
         </div>
