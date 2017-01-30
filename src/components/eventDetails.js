@@ -26,17 +26,17 @@ class EventDetails extends Component {
       router: PropTypes.object
     };
     componentWillMount() {
-      console.log("componentWillMount"+ this.props.params.id );
+    //console.log("componentWillMount"+ this.props.params.id );
     this.props.fetchEvent(this.props.params.id);
   }
   render() {
-    console.log(this.props);
+    //console.log(this.props);
     // const eventD = this.props
     if(!this.props.event.name){
       return <div> loading </div>;
     }
     //getWhoNames
-    console.log( this.props);
+  //  console.log( this.props);
    event = this.props.event;
    var url=buildUrl( this.props.params.id )
    if((event.photoUrl== '') ||(event.photoUrl=='default')){
@@ -74,7 +74,7 @@ class EventDetails extends Component {
 
 
 };
-console.log(url+'2333333333333333333333333333333333333333333333333333');
+
     return (
         <div className="jumbotron">
       <MuiThemeProvider>
@@ -168,8 +168,8 @@ console.log(url+'2333333333333333333333333333333333333333333333333333');
       </Card>
 
     </MuiThemeProvider>
-          <div className='inline'><GoingButton eventId={this.props.params.id}/></div>
-          <div className='inline'><NotGoingButton eventId={this.props.params.id} /></div>
+          <div className='inline'><GoingButton eventId={this.props.params.id} url={url}/></div>
+          <div className='inline'><NotGoingButton eventId={this.props.params.id} url={url}/></div>
 {/* <DialogExampleSimpTle className='inline'/> */}
           <div > "    " </div>
 
@@ -184,13 +184,15 @@ function mapStateToProps(state) {
   return { event: state.event };
 }
 function buildUrl(eventId){
-console.log("this is our eventid"+eventId);
+//console.log("this is our eventid"+eventId);
 var link ='https://blooming-savannah-34852.herokuapp.com/preview?'
  link= link + queryString.stringify({
     id: eventId,
 });
 var link2=`https://kh6rp.app.goo.gl/?link=${link}&apn=com.simplan&ibi=com.jerem.ProjectAlphaSimplan&isi=1117985242&d=1`
-return (link2);
+var resault = encodeURI(link2);
+
+return resault;
 
 }
 
