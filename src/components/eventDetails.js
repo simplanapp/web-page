@@ -123,7 +123,7 @@ class EventDetails extends Component {
 </MuiThemeProvider>
 
   <MuiThemeProvider>
-    <Card>
+    <Card style={{marginBottom:20}}>
       <CardHeader>
 
         <div className="mom">
@@ -163,7 +163,7 @@ class EventDetails extends Component {
           <div className='inline'><GoingButton eventId={this.props.params.id}/></div>
           <div className='inline'><NotGoingButton eventId={this.props.params.id} /></div>
 {/* <DialogExampleSimpTle className='inline'/> */}
-          <div padding={'10px'}>  </div>
+          <div >  </div>
 
 
         </div>

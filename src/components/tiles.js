@@ -124,8 +124,7 @@ return(
 >
             {tile.name}
           </Avatar> */}
-          <div style={{backgroundColor: imageColor[tile.status]
-        }} >
+          <div /*style={{backgroundColor: imageColor[tile.status]}} */>
              <img  className="img-circle" src={tile.photo} />
           </div>
 
