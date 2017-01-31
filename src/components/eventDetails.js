@@ -17,6 +17,7 @@ import ChipFriend from './chip'
 import Tiles from './tiles'
 import {GridList, GridTile} from 'material-ui/GridList';
 import queryString from 'query-string';
+import Loading from './progress_bar'
 injectTapEventPlugin();
 var event ,placeId;
 
@@ -33,7 +34,7 @@ class EventDetails extends Component {
     //console.log(this.props);
     // const eventD = this.props
     if(!this.props.event.name){
-      return <div> loading </div>;
+      return <div><Loading /> </div>;
     }
     //getWhoNames
   //  console.log( this.props);
