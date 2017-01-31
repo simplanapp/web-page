@@ -4,15 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 const CircularProgressExampleSimple = () => (
   <div>
     <MuiThemeProvider>
-       <CircularProgress />
-     </MuiThemeProvider>
-
-       <MuiThemeProvider>
-      <CircularProgress size={60} thickness={7} />
-      </MuiThemeProvider>
-
-      <MuiThemeProvider>
-      <CircularProgress size={80} thickness={5} />
+       <CircularProgress size={500} thickness={10} style={{margin:"auto",left:"25%",top:500}}/>
      </MuiThemeProvider>
 
 
