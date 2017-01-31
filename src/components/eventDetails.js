@@ -17,7 +17,7 @@ import ChipFriend from './chip'
 import Tiles from './tiles'
 import {GridList, GridTile} from 'material-ui/GridList';
 import queryString from 'query-string';
-import Loading from './progress_bar'
+import Loading from './progress_bar';
 injectTapEventPlugin();
 var event ,placeId;
 
