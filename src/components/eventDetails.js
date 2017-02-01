@@ -190,7 +190,7 @@ var link ='https://blooming-savannah-34852.herokuapp.com/preview?'
  link= link + queryString.stringify({
     id: eventId,
 });
-var link2=`https://kh6rp.app.goo.gl/?link=${link}&apn=com.simplan&ibi=com.jerem.ProjectAlphaSimplan&isi=1117985242&d=1`
+var link2=`https://kh6rp.app.goo.gl/?link=${link}&apn=com.simplan&ibi=com.jerem.ProjectAlphaSimplan&isi=1117985242`
 var resault = encodeURI(link2);
 
 return resault;
