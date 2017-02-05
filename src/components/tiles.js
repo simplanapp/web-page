@@ -9,6 +9,7 @@ const styles = {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
+    width: '100%'
 
   },
   gridList: {
@@ -16,12 +17,15 @@ const styles = {
     flexWrap: 'nowrap',
     overflowX: 'auto',
 
+
   },
   titleStyle: {
     color: 'White',
     backgroundColor: false,
     textAlign: 'center',
     fontSize: 20,
+
+
 
   },
 };
@@ -99,16 +103,16 @@ const imageColor=['#A5D6A7','#FFCC80','#E57373','#E0E0E0','#E0E0E0'];
 
 return(
 
-  <div style={styles.root}>
+  <div style={styles.root} className="tttttttt">
     <GridList style={styles.gridList} cols={2.2} padding={20}>
       {tilesData.map((tile) => (
 
-        <GridTile
+        <GridTile className="imageBlock"
           key={tile.id}
           title={tile.name}
           titleBackground={imageColor[tile.status]}
           titleStyle={styles.titleStyle}
-
+          style={{width:150}}
           //titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)"
         >
           {/* {
@@ -124,8 +128,8 @@ return(
 >
             {tile.name}
           </Avatar> */}
-          <div /*style={{backgroundColor: imageColor[tile.status]}} */>
-             <img  className="img-circle" src={tile.photo} style={{borderColor:imageColor[tile.status]}} />
+          <div className='5555' >
+             <img  className="img-circle" src={tile.photo} style={{borderColor:imageColor[tile.status], width: '100%'}} />
           </div>
 
         </GridTile>

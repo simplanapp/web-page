@@ -134,9 +134,12 @@ th.test {
 }
 .icon {
     display: block!important;
-    margin: 5 auto!important;
+    margin: 5px !important;
     position: absolute;
     top: 0; bottom:0; right:0;
+    height: auto;;
+    line-height: normal;
+    align-content: center;
 
 }
 .icon2 {
