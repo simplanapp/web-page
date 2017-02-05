@@ -109,12 +109,12 @@ export default class GoingButton extends React.Component {
         keyboardFocused={true}
         onTouchTap={this.handleSubmit}
       />,
-        <a href={this.props.url}>
-        <img className='icon2'
-          src='https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2FdownloadappB.PNG?alt=media&token=d528546d-0aef-46f7-b20a-eb7b45e55f81'
-           style={{width: "50%", textAlign:"right"}}
-         />
-       </a>,
+      //   <a href={this.props.url}>
+      //   <img className='icon2'
+      //     src='https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2FdownloadappB.PNG?alt=media&token=d528546d-0aef-46f7-b20a-eb7b45e55f81'
+      //      style={{width: "50%", textAlign:"right"}}
+      //    />
+      //  </a>,
     ];
     //console.log(this.props);
     return (
@@ -141,8 +141,18 @@ export default class GoingButton extends React.Component {
           open={this.state.open}
           onRequestClose={this.handleClose}
           autoDetectWindowHeight={false}
-        >
+          title={<div> <a href= {this.props.url} style={{color:'Black'}}> Download App</a></div>}
+          titleStyle={{
+            textAlign:"center",
+            fontSize: 75,
+            margin: 20,
+            padding: 50,
 
+
+
+          }}
+        >
+          <div className="download-link" ><h1> or </h1>  if you are lazy </div>
           <TextFieldExampleError handleChange={this.handleChangedName} ref = "nameRef"/>
         </Dialog>
       </MuiThemeProvider>

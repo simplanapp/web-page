@@ -84,19 +84,28 @@ th.test {
   color: #311B92 !important;
 }
 .bodyc{
-  margin: 10px;
-  display: inline-flex;
+  margin: 2px;
+
   justify-content: space-between;
   align-items: center;
   font-size: 50px !important;
   position: relative !important;
 }
+.download-link{
+  margin: 20px;
+  text-align: center;
+  display: relative;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 40px !important;
+}
 .bodyc div{
+  padding: 10px;
   margin: 2px;
   display: relative;
   justify-content: space-between;
   align-items: center;
-  font-size: 50px !important;
+  /*font-size: 50px !important;*/
   width: 100% !important;
   height: 100% !important;
   position: relative !important;
@@ -153,6 +162,10 @@ th.test {
     margin: 5 auto!important;
     position: absolute;
     bottom:0; left:0;
+
+}
+input {
+  font-size: 50px !important;
 
 }
 .mom {

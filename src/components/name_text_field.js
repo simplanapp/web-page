@@ -22,10 +22,15 @@ export default class TextFieldExampleControlled extends React.Component {
   render() {
     return (
       <div>
+
         <TextField
-          hintText=" "
+          inputStyle={{font: '50px !important' }}
+          hintText="Enter Your Name"
           hintStyle={{
-            fontSize: '50px'
+            fontSize: '50px',
+            height:0,
+            bottom: '-75px'
+
           }}
 
           floatingLabelStyle={{
@@ -33,7 +38,7 @@ export default class TextFieldExampleControlled extends React.Component {
               fontSize: '50px'
             }}
           floatingLabelFocusStyle={{
-              margin: '-30px'
+              margin: '2px'
           }}
 
           errorStyle={{
@@ -41,14 +46,19 @@ export default class TextFieldExampleControlled extends React.Component {
             fontSize: '20px !important'
           }}
           floatingLabelStyle={{
-            fontSize: '50px'
+            fontSize: '50px',
+            bottom: '-40px',
+            margin: '50px'
+
+
           }}
-          floatingLabelText="Enter your name"
+          floatingLabelText="Update Your Status"
           id="text-field-controlled"
           value={this.state.value}
           onChange={this.handleChange }
+
         />
-        
+
       </div>
     );
   }
