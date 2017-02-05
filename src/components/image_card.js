@@ -9,7 +9,7 @@ const ImageCard = (event) => (
     <CardMedia
       overlay={<CardTitle title={event.eventInfo.name} titleStyle={{fontSize: 50, padding:7}} >
         <a href={event.url}>
-          <img className='icon' src='https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Flogo-App_store_Google_play1.png?alt=media&token=cd34ccb3-6d76-4c96-b05d-0bde3e92e05c' style={{width: "50%", textAlign:"right"}}/>
+          <img className='icon' src='https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Fdownloadapp.PNG?alt=media&token=27c3d8ab-2271-44b0-a701-d894562cd0e5' style={{width: "50%", textAlign:"right"}}/>
         </a>
 
       </CardTitle> }
