@@ -20,15 +20,20 @@ const styles = {
 
   },
   titleStyle: {
-    color: 'White',
+    color: 'Black',
     backgroundColor: false,
     textAlign: 'center',
     fontSize: 20,
+    marginTop: 20
+
 
 
 
   },
 };
+const icon=['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Faplicativos_0845_Check.png?alt=media&token=c299db40-42fc-455d-9680-408dcf7917b6',
+'https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Faplicativos_0845_Check.png?alt=media&token=c299db40-42fc-455d-9680-408dcf7917b6',
+'https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Fdelete_256.png?alt=media&token=b4a3014f-c901-4e10-8645-7bc3352e4d5f'];
 
 const monkeys=['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/designJer%2Fmonkeys%2Fmonkey1.png?alt=media&token=20fcf3a5-6bc8-4462-95b2-88985e14f22e',
 'https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/designJer%2Fmonkeys%2Fmonkey10.png?alt=media&token=635dc531-3db1-408b-bdd4-21cb998849e9',
@@ -110,9 +115,9 @@ return(
         <GridTile className="imageBlock"
           key={tile.id}
           title={tile.name}
-          titleBackground={imageColor[tile.status]}
+          titleBackground='false'
           titleStyle={styles.titleStyle}
-          style={{width:150}}
+          style={{width:150,}}
           //titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)"
         >
           {/* {
@@ -130,6 +135,9 @@ return(
           </Avatar> */}
           <div className='5555' >
              <img  className="img-circle" src={tile.photo} style={{borderColor:imageColor[tile.status], width: '100%'}} />
+             <img  className="status-icon" src={icon[tile.status]}/>
+
+
           </div>
 
         </GridTile>
