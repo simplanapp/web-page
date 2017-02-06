@@ -30,14 +30,14 @@ export default class TextFieldExampleControlled extends React.Component {
             fontSize: '50px',
             height:0,
             bottom: '-75px',
-            fontFamily: 'Raleway',
+            fontFamily: 'Quicksand',
 
           }}
 
           floatingLabelStyle={{
             height: '50%',
               fontSize: '50px',
-              fontFamily: 'Raleway',
+              fontFamily: 'Quicksand',
             }}
           floatingLabelFocusStyle={{
               margin: '2px'
@@ -51,7 +51,7 @@ export default class TextFieldExampleControlled extends React.Component {
             fontSize: '50px',
             bottom: '-40px',
             margin: '50px',
-            fontFamily: 'Raleway',
+            fontFamily: 'Quicksand',
 
           }}
           floatingLabelText="Enter your Name"
