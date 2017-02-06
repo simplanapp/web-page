@@ -75,7 +75,7 @@ class EventDetails extends Component {
 
 
 };
-
+const icon = ['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Faplicativos_smal_40.png?alt=media&token=5ccd8005-c4d9-489f-bf79-4eeea9a18bbb','https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Fdelete_40.png?alt=media&token=e0a85cdf-f777-4095-b398-0d261a75a98b']
     return (
         <div className="jumbotron">
       <MuiThemeProvider>
@@ -131,13 +131,13 @@ class EventDetails extends Component {
 
         <div className="mom">
 <div className="child">
-  <div className="childinner">going:<br />{event.goingCounter}</div>
+  <div className="childinner"> <img src={icon[0]}/>going<br />{event.goingCounter}</div>
 </div>
 <div className="child">
-  <div className="childinner">maybe:<br />{event.maybeCounter}</div>
+  <div className="childinner">maybe<br />{event.maybeCounter}</div>
 </div>
 <div className="child">
-  <div className="childinner">invited:<br />{event.invitedCounter}</div>
+  <div className="childinner">invited<br />{event.invitedCounter}</div>
 </div>
 
 </div>
@@ -169,8 +169,19 @@ class EventDetails extends Component {
       </Card>
 
     </MuiThemeProvider>
-          <div className='inline'><GoingButton eventId={this.props.params.id} url={url}/></div>
-          <div className='inline'><NotGoingButton eventId={this.props.params.id} url={url}/></div>
+    <MuiThemeProvider style={{marginBottom:20}}>
+      <Card>
+        <CardHeader>
+          <div className='inlinel'><GoingButton eventId={this.props.params.id}  url={url}/></div>
+          <div className='inliner'><NotGoingButton eventId={this.props.params.id} url={url}/></div>
+
+        </CardHeader>
+
+      </Card>
+
+    </MuiThemeProvider>
+          {/* <div className='inlinel'><GoingButton eventId={this.props.params.id} style={{left:'30px'}} url={url}/></div>
+          <div className='inliner'><NotGoingButton eventId={this.props.params.id} style={{right:'30px'}} url={url}/></div> */}
 {/* <DialogExampleSimpTle className='inline'/> */}
           <div > "    " </div>
 

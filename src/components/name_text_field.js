@@ -29,13 +29,15 @@ export default class TextFieldExampleControlled extends React.Component {
           hintStyle={{
             fontSize: '50px',
             height:0,
-            bottom: '-75px'
+            bottom: '-75px',
+            fontFamily: 'Handlee',
 
           }}
 
           floatingLabelStyle={{
             height: '50%',
-              fontSize: '50px'
+              fontSize: '50px',
+              fontFamily: 'Handlee',
             }}
           floatingLabelFocusStyle={{
               margin: '2px'
@@ -48,8 +50,8 @@ export default class TextFieldExampleControlled extends React.Component {
           floatingLabelStyle={{
             fontSize: '50px',
             bottom: '-40px',
-            margin: '50px'
-
+            margin: '50px',
+            fontFamily: 'Handlee',
 
           }}
           floatingLabelText="Update Your Status"

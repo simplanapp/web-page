@@ -24,9 +24,10 @@ import axios from 'axios';
   color: '#26155E',
   // primary: 'true',
   // border: '2px solid #ff980',
-  backgroundColor: '#007f00',
-  labelColor: '#ffffff',
-  padding : 15
+  backgroundColor: '#69F0AE',
+  labelColor: 'Black',
+  padding : 15,
+  borderRadius: "40px"
 
   // labelColor: '#ffffff',
   }
@@ -121,7 +122,7 @@ export default class GoingButton extends React.Component {
           <div>
           <MuiThemeProvider>
         <RaisedButton primary={true} label="going" fullWidth={true} onTouchTap={this.handleOpen} labelStyle={{fontSize: 40,
-        padding: 15}} style={styles} buttonStyle={styles} />
+        padding: 20, color: 'Black', fontFamily: 'Handlee'}} style={styles} buttonStyle={styles} />
       </MuiThemeProvider>
         <MuiThemeProvider>
 
@@ -146,7 +147,7 @@ export default class GoingButton extends React.Component {
             textAlign:"center",
             fontSize: 75,
             margin: 20,
-            padding: 50,
+            padding: 80,
 
 
 

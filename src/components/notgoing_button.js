@@ -23,12 +23,13 @@ import axios from 'axios';
  const styles = {
 
   color: '#26155E',
-  labelColor: '#ffffff',
+  labelColor: 'Black',
 
   // border: '2px solid #ff980',
-  backgroundColor: '#7f0000',
-  padding: 15
-
+  backgroundColor: '#FF5252',
+  padding: 15,
+  textAlign: 'center',
+  borderRadius: "40px"
   }
 
 export default class GoingButton extends React.Component {
@@ -119,10 +120,10 @@ export default class GoingButton extends React.Component {
     ];
     //console.log(this.props);
     return (
-          <div>
+          <div className="notgoing-button">
           <MuiThemeProvider>
         <RaisedButton primary={true} label="CAN'T GO" fullWidth={true} onTouchTap={this.handleOpen} style={styles} labelStyle={{fontSize: 40,
-        padding: 15}} buttonStyle={styles} />
+        padding: 20, color: 'Black',fontFamily:'Handlee'}} buttonStyle={styles} />
       </MuiThemeProvider>
         <MuiThemeProvider>
 
@@ -147,7 +148,7 @@ export default class GoingButton extends React.Component {
               textAlign:"center",
               fontSize: 75,
               margin: 20,
-              padding: 50
+              padding: 80
 
             }}
           >

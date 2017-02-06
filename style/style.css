@@ -47,12 +47,32 @@ a.btn {
   width: 100% !important;
   height: :100% !important;
 }
-.inline {
+.inliner {
   /*align-items: center;*/
   margin-top: 20px;
+  margin-bottom: 20px;
   display: inline-block !important;
+  /*position: absolute;*/
+  width: 40%;
 
-  width: 50%;
+  padding-left: 5%;
+  /*justify-content: space-around;*/
+}
+/*.notgoing-button {
+  text-align:center;
+
+
+  justify-content: space-around;
+  align-items: center;
+}*/
+.inlinel {
+  /*align-items: center;*/
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: inline-block !important;
+  /*position: absolute;*/
+  width: 40%;
+  padding-right:5%;
 
   /*justify-content: space-around;*/
 }
@@ -89,6 +109,7 @@ th.test {
   justify-content: space-between;
   align-items: center;
   font-size: 50px !important;
+  font-family: 'Handlee' !important;
   position: relative !important;
 }
 .download-link{
@@ -98,6 +119,7 @@ th.test {
   justify-content: space-between;
   align-items: center;
   font-size: 40px !important;
+  font-family: 'Handlee' !important;
 }
 .bodyc div{
   padding: 10px;
@@ -114,6 +136,11 @@ th.test {
   position: relative !important;
   display: relative !important;
 }
+{
+font-size: 100%;
+font-family: 'Handlee' !important;
+}
+
 
 .korah{
   background-color: #6433B1 !important;
@@ -124,14 +151,14 @@ th.test {
   width: 100% !important;
 
   font-weight: large;
-  font: 40px arial, sans-serif !important;
+  font: 40px 'Handlee', sans-serif !important;
 
 }
 .cardhead{
-    font: 40px arial, sans-serif !important;
+    font: 40px 'Handlee', sans-serif !important;
 }
 .cardhead.span{
-  font: 40px arial, sans-serif !important;
+  font: 40px 'Handlee', sans-serif !important;
 }
 .img-circle {
     border-radius: 50%;
@@ -184,7 +211,7 @@ input {
     align-items: center;
 
     text-align: center;
-    font: 40px arial, sans-serif !important;;
+    font: 40px 'Handlee', sans-serif !important;;
     padding: 2
 }
 .child:first-child .childinner {
