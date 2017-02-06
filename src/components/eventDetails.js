@@ -18,6 +18,7 @@ import Tiles from './tiles'
 import {GridList, GridTile} from 'material-ui/GridList';
 import queryString from 'query-string';
 import Loading from './progress_bar';
+import DownloadButton from './download_button'
 injectTapEventPlugin();
 var event ,placeId;
 
@@ -76,7 +77,8 @@ class EventDetails extends Component {
 
 
 };
-const icon = ['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Faplicativos_smal_40.png?alt=media&token=5ccd8005-c4d9-489f-bf79-4eeea9a18bbb','https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Fdelete_40.png?alt=media&token=e0a85cdf-f777-4095-b398-0d261a75a98b']
+const icon = ['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Faplicativos_smal_40.png?alt=media&token=5ccd8005-c4d9-489f-bf79-4eeea9a18bbb','https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Fdelete_40.png?alt=media&token=e0a85cdf-f777-4095-b398-0d261a75a98b',
+'https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Fquestion-mark40.png?alt=media&token=bbf6964b-9629-41fe-b73c-304f2a097bb6']
     return (
         <div className="jumbotron">
       <MuiThemeProvider>
@@ -121,7 +123,7 @@ const icon = ['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot
   />
 
   <CardText expandable={true} style={{fontSize:35}}>
-   יש עוד זמנים!! הרד את האפליקציה כדי להצביע ולהשפיע
+   יש עוד זמנים!! הורד את האפליקציה כדי להצביע ולהשפיע
   </CardText>
  </Card>
 </MuiThemeProvider>
@@ -135,7 +137,7 @@ const icon = ['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot
   <div className="childinner"> <img src={icon[0]}/>going<br />{event.goingCounter}</div>
 </div>
 <div className="child">
-  <div className="childinner">maybe<br />{event.maybeCounter}</div>
+  <div className="childinner"> <img src={icon[2]}/>maybe<br />{event.maybeCounter}</div>
 </div>
 <div className="child">
   <div className="childinner">invited<br />{event.invitedCounter}</div>
@@ -151,6 +153,9 @@ const icon = ['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot
 
       </Card>
     </MuiThemeProvider>
+
+
+
 
     {/* <MuiThemeProvider>
     <Card>
@@ -170,6 +175,26 @@ const icon = ['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot
       </Card>
 
     </MuiThemeProvider>
+
+    <MuiThemeProvider style={{marginBottom:20}}>
+      <Card>
+        <CardHeader>
+          <div className='inline' >
+          <DownloadButton  url={url}/>
+        {/* <GoingButton eventId={this.props.params.id}  url={url}/> */}
+        </div>
+
+
+        </CardHeader>
+
+
+
+
+        </Card>
+      </MuiThemeProvider>
+
+
+
     <MuiThemeProvider style={{marginBottom:20}}>
       <Card>
         <CardHeader>
