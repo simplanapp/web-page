@@ -7,7 +7,7 @@ const ImageCard = (event) => (
   <Card>
 
     <CardMedia
-      overlay={<CardTitle title={event.eventInfo.name} titleStyle={{fontSize: 50, padding:7, fontFamily:'Handlee',letterSpacing: 2}} >
+      overlay={<CardTitle title={event.eventInfo.name} titleStyle={{fontSize: 50, padding:7, fontFamily:'Raleway',letterSpacing: 2}} >
         {/* <a href={event.url}>
           <img className='icon' src='https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2FdownloadappB.PNG?alt=media&token=d528546d-0aef-46f7-b20a-eb7b45e55f81' style={{width: "50%", textAlign:"right"}}/>
         </a> */}

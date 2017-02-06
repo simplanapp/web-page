@@ -22,6 +22,7 @@ injectTapEventPlugin();
 var event ,placeId;
 
 
+
 class EventDetails extends Component {
   static contextTypes = {
       router: PropTypes.object

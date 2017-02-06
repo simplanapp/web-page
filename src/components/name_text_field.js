@@ -30,14 +30,14 @@ export default class TextFieldExampleControlled extends React.Component {
             fontSize: '50px',
             height:0,
             bottom: '-75px',
-            fontFamily: 'Handlee',
+            fontFamily: 'Raleway',
 
           }}
 
           floatingLabelStyle={{
             height: '50%',
               fontSize: '50px',
-              fontFamily: 'Handlee',
+              fontFamily: 'Raleway',
             }}
           floatingLabelFocusStyle={{
               margin: '2px'
@@ -51,10 +51,10 @@ export default class TextFieldExampleControlled extends React.Component {
             fontSize: '50px',
             bottom: '-40px',
             margin: '50px',
-            fontFamily: 'Handlee',
+            fontFamily: 'Raleway',
 
           }}
-          floatingLabelText="Update Your Status"
+          floatingLabelText="Enter your Name"
           id="text-field-controlled"
           value={this.state.value}
           onChange={this.handleChange }

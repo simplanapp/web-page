@@ -5,6 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextFieldExampleError from './name_text_field';
 import axios from 'axios';
+import GetApp from 'material-ui/svg-icons/action/get-app';
 // import ReactDOM from 'react-dom';
 /**
  * Dialog with action buttons. The actions are passed in as an array of React objects,
@@ -93,6 +94,7 @@ export default class GoingButton extends React.Component {
     const actions = [
       <FlatButton
         label="Cancel"
+
         primary={true}
         onTouchTap={this.handleClose}
         labelStyle={{
@@ -101,7 +103,8 @@ export default class GoingButton extends React.Component {
         }}
       />,
       <FlatButton
-        label="Submit"
+        label="CAN'T GO"
+        disabled={!this.state.name}
         primary={true}
         keyboardFocused={true}
         onTouchTap={this.handleSubmit}
@@ -143,7 +146,10 @@ export default class GoingButton extends React.Component {
             size: 'large'
           }}
             bodyClassName='bodyc'
-            title={<div> <a href= {this.props.url} style={{color:'Black'}}> Download App</a></div>}
+            title={<div> <a href= {this.props.url} style={{color:'Black', border:'3px',borderStyle: 'outset',borderRadius: '25px', padding:30,paddingBottom:50, width:"100%"}}>  Download App  </a>
+            <br/><GetApp style={{ width:"50px",
+      height: '50px', marginTop:20, position:"relative"}} /></div>}
+
             titleStyle={{
               textAlign:"center",
               fontSize: 75,

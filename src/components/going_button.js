@@ -4,6 +4,7 @@ import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextFieldExampleError from './name_text_field';
+import GetApp from 'material-ui/svg-icons/action/get-app';
 import axios from 'axios';
 // import ReactDOM from 'react-dom';
 /**
@@ -38,7 +39,7 @@ export default class GoingButton extends React.Component {
     super(props);
     this.state = {
         open: false,
-        name: ''
+        name: '',
       }
       this.handleChangedName = this.handleChangedName.bind(this);
     }
@@ -101,7 +102,8 @@ export default class GoingButton extends React.Component {
         onTouchTap={this.handleClose}
       />,
       <FlatButton
-        label="Submit"
+        label="GOING"
+        disabled={!this.state.name}
         labelStyle={{
           fontSize: '35px'
 
@@ -118,6 +120,9 @@ export default class GoingButton extends React.Component {
       //  </a>,
     ];
     //console.log(this.props);
+    console.log(this);
+
+    console.log('5555555555555');
     return (
           <div>
           <MuiThemeProvider>
@@ -142,7 +147,9 @@ export default class GoingButton extends React.Component {
           open={this.state.open}
           onRequestClose={this.handleClose}
           autoDetectWindowHeight={false}
-          title={<div> <a href= {this.props.url} style={{color:'Black'}}> Download App</a></div>}
+          title={<div> <a href= {this.props.url} style={{color:'Black', border:'3px',borderStyle: 'outset',borderRadius: '25px', padding:30,paddingBottom:50, width:"100%"}}>  Download App  </a>
+          <br/><GetApp style={{ width:"50px",
+    height: '50px', marginTop:20, position:"relative"}} /></div>}
           titleStyle={{
             textAlign:"center",
             fontSize: 75,
@@ -153,7 +160,7 @@ export default class GoingButton extends React.Component {
 
           }}
         >
-          <div className="download-link" ><h1> or </h1>  if you are lazy </div>
+          <div className="download-link" ><h1> or </h1>  if you are lazy?? </div>
           <TextFieldExampleError handleChange={this.handleChangedName} ref = "nameRef"/>
         </Dialog>
       </MuiThemeProvider>
