@@ -34,7 +34,7 @@ const styles = {
 };
 const icon=['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Faplicativos_0845_Check.png?alt=media&token=c299db40-42fc-455d-9680-408dcf7917b6',
 'https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Fquestion-mark-xxl.png?alt=media&token=137b1460-d8a5-45a9-b488-fc2e075c45f2',
-'https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Faplicativos_0845_Check.png?alt=media&token=c299db40-42fc-455d-9680-408dcf7917b6',
+'https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Fdelete_256.png?alt=media&token=b4a3014f-c901-4e10-8645-7bc3352e4d5f',
 'https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Fquestion-mark-xxl.png?alt=media&token=137b1460-d8a5-45a9-b488-fc2e075c45f2',
 ];
 
