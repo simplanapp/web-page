@@ -179,6 +179,7 @@ const icon = ['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot
     <MuiThemeProvider style={{marginBottom:20}}>
       <Card>
         <CardHeader>
+
           <div className='inline' >
           <DownloadButton  url={url}/>
         {/* <GoingButton eventId={this.props.params.id}  url={url}/> */}

@@ -146,7 +146,7 @@ export default class GoingButton extends React.Component {
             size: 'large'
           }}
             bodyClassName='bodyc'
-            title={<div> <a href= {this.props.url} style={{color:'Black', border:'3px',borderStyle: 'outset',borderRadius: '25px', padding:30,paddingBottom:50, width:"100%"}}>  Download App  </a>
+            title={<div> <a href= {this.props.url} style={{color:'Black', border:'3px',borderStyle: 'outset',borderRadius: '25px', padding:30,paddingBottom:50, width:"100%",backgroundColor:'#00B0A3', fontFamily:'Quicksand'}}>  Download App  </a>
             <br/><GetApp style={{ width:"50px",
       height: '50px', marginTop:20, position:"relative"}} /></div>}
 
