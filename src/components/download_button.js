@@ -7,7 +7,8 @@ const styles = {
  color: '#26155E',
  // primary: 'true',
  // border: '2px solid #ff980',
- backgroundColor: '#00B0A3',
+
+ backgroundColor: 'rgba(0, 176, 163, 0.5)',
  labelColor: 'Black',
 
  borderRadius: "40px",

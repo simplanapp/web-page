@@ -91,15 +91,16 @@ const icon = ['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot
      subtitle={event.where[placeId].adress}
      actAsExpander={true}
      titleColor = 'Black'
-     subtitleStyle={{ fontSize:  35,
+     subtitleStyle={{ fontSize:35 ,marginLeft:80,
       padding: 2}}
      titleStyle={{
        fontSize:  60,
        padding: 10,
+       marginLeft:80,
 
      }}
      showExpandableButton={true}
-   />
+   ><img src='https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2FIcon-2.png?alt=media&token=d3e58a4f-8a66-4494-93be-56ee6389045b' style={{left:'10px',top:'20%',position:'absolute',width:80,height:80}}/> </CardHeader>
 
    <CardText expandable={true} style={{fontSize:35}}>
  יש עוד מקומות!! הורד את האפליקציה כדי להצביע ולהשפיע
@@ -115,12 +116,15 @@ const icon = ['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot
     showExpandableButton={true}
     titleColor = 'Black'
     subtitleStyle={{ fontSize:  35,
+      marginLeft:80,
     padding: 2}}
     titleStyle={{
       fontSize:  50,
-      padding: 10
+      padding: 10,marginLeft:80,
     }}
-  />
+  >
+  <img src='https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Ficon1.png?alt=media&token=95ead114-a4a2-44c3-b7c6-a3c085eacbfb' style={{left:'10px',top:'20%',position:'absolute',width:70,height:70}}/>
+  </CardHeader>
 
   <CardText expandable={true} style={{fontSize:35}}>
    יש עוד זמנים!! הורד את האפליקציה כדי להצביע ולהשפיע
@@ -134,13 +138,13 @@ const icon = ['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot
 
         <div className="mom">
 <div className="child">
-  <div className="childinner"> <img src={icon[0]}/>going<br />{event.goingCounter}</div>
+  <div className="childinner"> <img src={icon[0]}/>Going<br />{event.goingCounter}</div>
 </div>
 <div className="child">
-  <div className="childinner"> <img src={icon[2]}/>maybe<br />{event.maybeCounter}</div>
+  <div className="childinner"> <img src={icon[2]}/>Maybe<br />{event.maybeCounter}</div>
 </div>
 <div className="child">
-  <div className="childinner">invited<br />{event.invitedCounter}</div>
+  <div className="childinner"><img src={icon[1]}/>Can't Go<br />{(event.numOfInvited)+(event.webCounter)-(event.maybeCounter)-(event.goingCounter)}</div>
 </div>
 
 </div>
