@@ -154,7 +154,8 @@ export default class GoingButton extends React.Component {
               textAlign:"center",
               fontSize: 75,
               margin: 20,
-              padding: 80
+              padding: 60,
+              paddingTop: 130,
 
             }}
           >
