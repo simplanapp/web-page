@@ -23,8 +23,9 @@ const styles = {
     color: 'Black',
     backgroundColor: false,
     textAlign: 'center',
-    fontSize: 20,
-    marginTop: 20
+    fontSize: 30,
+    marginTop: 20,
+    fontFamily: 'Quicksand',
 
 
 
