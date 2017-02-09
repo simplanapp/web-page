@@ -43,7 +43,10 @@ export default class GoingButton extends React.Component {
       }
       this.handleChangedName = this.handleChangedName.bind(this);
     }
-
+    componentDidMount () {
+      console.log("777777777777777777777777777777777");
+      setTimeout(function() { window.scrollTo(0, 200) },500);
+    }
   //
   // state = {
   //   open: false,
