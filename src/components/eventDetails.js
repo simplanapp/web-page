@@ -33,10 +33,7 @@ class EventDetails extends Component {
     //console.log("componentWillMount"+ this.props.params.id );
     this.props.fetchEvent(this.props.params.id);
   }
-  componentDidMount () {
-    console.log("777777777777777777777777777777777");
-  window.scrollTo(0, 500)
-}
+
 
   render() {
     //console.log(this.props);
@@ -68,6 +65,7 @@ class EventDetails extends Component {
    weekday[5] = "Friday";
    weekday[6] = "Saturday";
 
+
    var n = weekday[a.getDay()];
    var date = n+ "   "+ a.getUTCDate()+'/'+(a.getUTCMonth()+1)+'/'+a.getUTCFullYear();
    var hour= a.getHours();
@@ -84,6 +82,7 @@ class EventDetails extends Component {
 
 
 };
+var cantGo=((event.numOfInvited)+(event.webCounter)-(event.maybeCounter)-(event.goingCounter))|| 0
 const icon = ['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Faplicativos_smal_40.png?alt=media&token=5ccd8005-c4d9-489f-bf79-4eeea9a18bbb','https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Fdelete_40.png?alt=media&token=e0a85cdf-f777-4095-b398-0d261a75a98b',
 'https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2Fquestion-mark40.png?alt=media&token=bbf6964b-9629-41fe-b73c-304f2a097bb6']
     return (
@@ -151,7 +150,7 @@ const icon = ['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot
   <div className="childinner"> <img src={icon[2]}/>Maybe<br />{event.maybeCounter}</div>
 </div>
 <div className="child">
-  <div className="childinner"><img src={icon[1]}/>Can't Go<br />{(event.numOfInvited)+(event.webCounter)-(event.maybeCounter)-(event.goingCounter)}</div>
+  <div className="childinner"><img src={icon[1]}/>Can't Go<br />{cantGo}</div>
 </div>
 
 </div>
