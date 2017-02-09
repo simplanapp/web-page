@@ -34,7 +34,10 @@ import axios from 'axios';
   }
 
 export default class GoingButton extends React.Component {
-
+  componentDidMount () {
+    console.log("777777777777777777777777777777777");
+  window.scrollTo(0, 500)
+  }
   constructor(props){
     super(props);
     this.state = {

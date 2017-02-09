@@ -33,6 +33,10 @@ class EventDetails extends Component {
     //console.log("componentWillMount"+ this.props.params.id );
     this.props.fetchEvent(this.props.params.id);
   }
+  componentDidMount () {
+    console.log("777777777777777777777777777777777");
+  window.scrollTo(0, 500)
+}
 
   render() {
     //console.log(this.props);
@@ -42,7 +46,7 @@ class EventDetails extends Component {
     }
     //getWhoNames
   //  console.log( this.props);
-  window.scrollTo(0, 200);
+
    event = this.props.event;
    var url=buildUrl( this.props.params.id )
    if((event.photoUrl== '') ||(event.photoUrl=='default')){
