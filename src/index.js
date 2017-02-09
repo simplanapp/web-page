@@ -8,7 +8,7 @@ import App from './components/app';
 import reducers from './reducers';
 import routes from './routes';
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
-window.scrollTo(0, 1);
+
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
   <Router history={browserHistory} routes={routes} />

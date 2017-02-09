@@ -1,3 +1,4 @@
+
 import React, { Component ,PropTypes } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
@@ -32,6 +33,7 @@ class EventDetails extends Component {
     //console.log("componentWillMount"+ this.props.params.id );
     this.props.fetchEvent(this.props.params.id);
   }
+
   render() {
     //console.log(this.props);
     // const eventD = this.props
@@ -220,6 +222,7 @@ const icon = ['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot
         </div>
 
     );
+    window.scrollTo(0, 400);
   }
 }
 
