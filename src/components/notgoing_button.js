@@ -45,7 +45,7 @@ export default class GoingButton extends React.Component {
     }
     componentDidMount () {
       console.log("777777777777777777777777777777777");
-      setTimeout(function() { window.scrollTo(0, 200) },500);
+      setTimeout(function() { window.scrollTo(0, 500) },800);
     }
   //
   // state = {
