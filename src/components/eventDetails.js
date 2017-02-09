@@ -42,6 +42,7 @@ class EventDetails extends Component {
     }
     //getWhoNames
   //  console.log( this.props);
+  window.scrollTo(0, 200);
    event = this.props.event;
    var url=buildUrl( this.props.params.id )
    if((event.photoUrl== '') ||(event.photoUrl=='default')){
@@ -222,7 +223,7 @@ const icon = ['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot
         </div>
 
     );
-    window.scrollTo(0, 400);
+
   }
 }
 

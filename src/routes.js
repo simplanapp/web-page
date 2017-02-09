@@ -9,7 +9,7 @@ import EventDetails from './components/eventDetails';
 import post_item from './components/post_item';
 export default (
   <Route path="/" component={App}>
-    <Route path="event/:id" component={EventDetails} />
+    <Route path="event/:id" component={EventDetails}  onload="window.scrollTo(0, 200)"/>
     <Route path="posts" component={post_item} />
   </Route>
 );

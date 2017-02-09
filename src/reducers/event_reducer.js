@@ -9,6 +9,7 @@ export default function(state = {}, action) {
   switch (action.type) {
     case FETCH_EVENT:
     console.log( action);
+
     return action.payload;
     }
 
