@@ -190,6 +190,10 @@ font-family: 'Quicksand', sans-serif !important;
 .cardhead.span{
   font: 40px 'Quicksand', sans-serif !important;
 }
+.place-image{
+  width: 300px !important;
+  height: 200px !important;
+}
 .img-circle {
     border-radius: 50%;
     width: 150px !important;

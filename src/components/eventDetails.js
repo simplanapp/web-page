@@ -19,6 +19,7 @@ import Tiles from './tiles'
 import {GridList, GridTile} from 'material-ui/GridList';
 import queryString from 'query-string';
 import Loading from './progress_bar';
+import Places from './places'
 import DownloadButton from './download_button'
 injectTapEventPlugin();
 var event ,placeId;
@@ -52,6 +53,7 @@ class EventDetails extends Component {
    }
    var names=[event.who];
    var webNames=[event.webWho]
+   var places=[event.where]
    //console.log(names);
    //getWhoNames(names)
    placeId = event.curPlaceId;
@@ -108,8 +110,8 @@ const icon = ['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot
      showExpandableButton={true}
    ><img src='https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot.com/o/icons%2FIcon-2.png?alt=media&token=d3e58a4f-8a66-4494-93be-56ee6389045b' style={{left:'10px',top:'20%',position:'absolute',width:80,height:80}}/> </CardHeader>
 
-   <CardText expandable={true} style={{fontSize:35}}>
- יש עוד מקומות!! הורד את האפליקציה כדי להצביע ולהשפיע
+   <CardText expandable={true} style={{fontSize:35, width:'100%'}}>
+     <Places names={places}/>
     </CardText>
  </Card>
   </MuiThemeProvider>
@@ -133,7 +135,7 @@ const icon = ['https://firebasestorage.googleapis.com/v0/b/simplan-alpha.appspot
   </CardHeader>
 
   <CardText expandable={true} style={{fontSize:35}}>
-   יש עוד זמנים!! הורד את האפליקציה כדי להצביע ולהשפיע
+   There are more options download the app to choose what works out for you
   </CardText>
  </Card>
 </MuiThemeProvider>
